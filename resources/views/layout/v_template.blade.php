@@ -53,10 +53,13 @@
 			<div class="main-header">
 				<div class="container">
 					<div class="logo-wrap" itemprop="logo">
-						<img src="/template/edulab/images/logo-selective.png" alt="Logo Image">
+						<hr>
+						<img src="/template/edulab/images/logo-selective.png" alt="Logo Image" height="200px" width="150px">
+						<hr>
 						<!-- <h1>Education</h1> -->
 					</div>
 					<div class="nav-wrap">
+						{{-- <br> --}}
 						<nav class="nav-desktop">
 							<ul class="menu-list">
 								<li><a href="/home">Home</a></li>
