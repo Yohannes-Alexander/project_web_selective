@@ -77,6 +77,7 @@
             <div class="recent-post">
                 <h2>Other Careers</h2>
                 <div class="post">
+                    
                     <div class="post-wrap">
                         <div class="img-wrap">
                             <img src="https://source.unsplash.com/59x90/?programmer" alt="Post Images">

@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>@yield('title') | Selective Coffee Roaster</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="shortcut icon" href="/template/edulab/images/logoatas.png">
 	<meta name="viewport" content="width=device-width">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +18,8 @@
 	<link rel="stylesheet" type="text/css" href="/template/edulab/inner-page-style.css">
 	<link rel="stylesheet" type="text/css" href="/template/edulab/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
+	
+	
 </head>
 <body>
 	<div id="page" class="site" itemscope itemtype="http://schema.org/LocalBusiness">

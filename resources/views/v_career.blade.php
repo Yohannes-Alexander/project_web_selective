@@ -1,9 +1,24 @@
 @extends('layout.v_template')
 @section('title','Career')
 @section('content')
+<br><br>
+    <h1 align="center">Cari Lowongan Pekerjaan...</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form action="/career">
+                <div class="input-group input-group-lg">
+                    <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Input Nama Posisi (ex: Barista)" name="search" value="{{ request('search') }}">
+                    <button type="submit" class="btn btn-primary" >Search</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
     <div class="page-content">
         <div class="container">
+              
             <div class="grid-container" itemscope itemtype=" http://schema.org/Event">
+                
                 @foreach ($pelamar as $item)
                     <div class="grid-box-wrap">
                         <div class="grid-img" itemprop="image">
@@ -111,7 +126,7 @@
                         <a href="#">read more <i class="fas fa-long-arrow-alt-right"></i></a>
                     </div>
                 </div> --}}
-
+            <br>
             <nav class="navigation pagination">
                 <div class="nav-links">
                     <a href="#" class="page-numbers">Previous</a>
@@ -216,19 +231,26 @@
                     </div>
                 </div>
             </aside> --}}
-            <aside>
+            {{-- <aside>
+                
                 <div class="news-letter">
                     <h2>Cari Lowongan Pekerjaan</h2>
                     <hr>
                     <p>Don't miss a thing! Search your career.</p>
-                    <input type="email" name="userEmail" placeholder="Cari Pekerjaan...">
-                    <input type="email" name="text" placeholder="Cari Cabang...">
                     
-                    <a href="#">Search</a>
-                </div>
+                    <form action="/career">
+                        <input type="text" name="search" placeholder="Cari Pekerjaan..."> --}}
+                        {{-- <input type="email" name="text" placeholder="Cari Cabang..."> --}}
+                        {{-- <button class="btn btn-danger" type="submit">Search</button> --}}
+                    {{-- </form> --}}
+                        
+                    
+
+                    {{-- <a href="#">Search</a> --}}
+                {{-- </div> --}}
                 <!-- New Letter Ends -->
                 
-            </aside> 
+            {{-- </aside>  --}}
         
         </div>
     </div>

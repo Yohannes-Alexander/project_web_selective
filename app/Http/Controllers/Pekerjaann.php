@@ -12,8 +12,12 @@ class Pekerjaann extends Controller
     //     $this->middleware('auth');
     // }
     public function Pekerjaann(){
-        $pelamar = \App\Models\pelamar::all();
-        return view('v_career', ['pelamar' => $pelamar]);
+        $pelamar = pelamar::latest();
+        if(request('search')){
+            $pelamar->where("name", 'like', '%'.request('search'). '%');
+            // echo (request('search'));
+        }
+        return view('v_career', ['pelamar' => $pelamar->latest()->get()]);
     }
 
     public function Pekerjaan_detail(pelamar $pelamar){
@@ -43,8 +47,11 @@ class Pekerjaann extends Controller
     }
 
     public function index(){
-        $pelamar = \App\Models\pelamar::all();
-        return view('v_dash_makanan', compact('pelamar'));
+        $pelamar = \App\Models\pelamar::latest();
+        if(request('search')){
+            $pelamar->where('name', 'like', '%'.request('search'). '%');
+        }
+        return view('v_career', compact('pelamar'));
     }
 
     public function edit($id){

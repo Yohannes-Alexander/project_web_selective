@@ -100,7 +100,9 @@
 
                     <a href="#" class="button">show more</a>
                 </main>
+                <br>
                 <aside>
+                    <br>
                     <div class="submit-testimonials">
                         <h2>Submit your Testimonials</h2>
                         <form>
@@ -110,8 +112,9 @@
                             <input type="text" placeholder="Your title*" required>
                             <textarea placeholder="Write your message"></textarea>
                             <span>
-                                <p>Rate us*</p> <div class="rateYo"></div>
+                                <p>Rate us*</p>
                             </span>
+                            <input type="number" name="myInput" step="1" value="1" max="5" required>
                             <input id="file-upload" type="file" value="Upload Image*" accept="image/*" required>
                             <label for="file-upload" class="custom-file-upload">Upload Image*</label>
                             <input type="submit" value="Submit">

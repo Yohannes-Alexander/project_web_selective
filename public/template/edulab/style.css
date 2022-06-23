@@ -2646,6 +2646,7 @@ aside .reserve-course input[type="email"],
 	padding-bottom: 0.875em;
 	border-bottom: 1px solid #adadad;
 	margin-bottom: 1.25em;
+	margin-right: 10px;
 }
 
 .testimonial-page .customer-review .row:last-of-type {
@@ -2653,7 +2654,7 @@ aside .reserve-course input[type="email"],
 }
 
 .customer-review .row .img {
-	width: 171px;
+	width: 150px;
 	height: auto;
 }
 
