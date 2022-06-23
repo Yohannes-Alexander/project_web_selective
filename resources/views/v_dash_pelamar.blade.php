@@ -491,22 +491,25 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="/dash_makanan" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
-              <p>
-                Jobs
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="/dash_testimoni" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
-              <p>
-                Testimoni
-              </p>
-            </a>
-          </li>
+          <?php if (Auth::user()->level== 'Super User' or Auth::user()->level== 'Middle User') { ?>
+            <li class="nav-item">
+              <a href="/dash_makanan" class="nav-link">
+                <i class="nav-icon far fa-image"></i>
+                <p>
+                  Jobs
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/dash_testimoni" class="nav-link">
+                <i class="nav-icon far fa-image"></i>
+                <p>
+                  Testimoni
+                </p>
+              </a>
+            </li>
+
+          <?php } ?>
           {{-- <li class="nav-item">
             <a href="pages/kanban.html" class="nav-link">
               <i class="nav-icon fas fa-columns"></i>

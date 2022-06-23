@@ -471,7 +471,7 @@
               </p>
             </a>
           </li>
-          <?php if (Auth::user()->level== 'Super User') { ?>
+          <?php if (Auth::user()->level== 'Super User' or Auth::user()->level== 'Middle User') { ?>
             <li class="nav-item">
               <a href="/dash_makanan" class="nav-link">
                 <i class="nav-icon far fa-image"></i>
