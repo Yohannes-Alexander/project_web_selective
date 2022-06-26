@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Log in </title>
+  <title>Admin Selective | Register </title>
   <link rel="shortcut icon" href="/template/edulab/images/logodash1.png">
 
   <!-- Google Font: Source Sans Pro -->
@@ -15,13 +15,20 @@
   <link rel="stylesheet" href="../../template/AdminLTE-3.2.0/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../../template/AdminLTE-3.2.0/dist/css/adminlte.min.css">
+  <style>
+    body {
+      background-image: url('/template/edulab/images/background.jpg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+    </style>
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="#" class="h1">Register User</a>
+      <a href="#" class="h1">Register Admin</a>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Register to start your session</p>

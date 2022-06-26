@@ -4,36 +4,36 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Dashboard</title>
+    <title>Admin Selective | User</title>
     <link rel="shortcut icon" href="/template/edulab/images/logodash1.png">
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="/template/AdminLTE-3.2.0/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="template/AdminLTE-3.2.0/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Tempusdominus Bootstrap 4 -->
-  <link rel="stylesheet" href="/template/AdminLTE-3.2.0/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <link rel="stylesheet" href="template/AdminLTE-3.2.0/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
   <!-- iCheck -->
-  <link rel="stylesheet" href="/template/AdminLTE-3.2.0/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <link rel="stylesheet" href="template/AdminLTE-3.2.0/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- JQVMap -->
-  <link rel="stylesheet" href="/template/AdminLTE-3.2.0/plugins/jqvmap/jqvmap.min.css">
+  <link rel="stylesheet" href="template/AdminLTE-3.2.0/plugins/jqvmap/jqvmap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="/template/AdminLTE-3.2.0/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="template/AdminLTE-3.2.0/dist/css/adminlte.min.css">
   <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="/template/AdminLTE-3.2.0/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="template/AdminLTE-3.2.0/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
   <!-- Daterange picker -->
-  <link rel="stylesheet" href="/template/AdminLTE-3.2.0/plugins/daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="template/AdminLTE-3.2.0/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
-  <link rel="stylesheet" href="/template/AdminLTE-3.2.0/plugins/summernote/summernote-bs4.min.css">
+  <link rel="stylesheet" href="template/AdminLTE-3.2.0/plugins/summernote/summernote-bs4.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="/template/AdminLTE-3.2.0/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    <img class="animation__shake" src="template/AdminLTE-3.2.0/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
   </div>
 
   <!-- Navbar -->
@@ -53,12 +53,6 @@
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <form action="/logout" method="POST">
-          @csrf
-          <button class="btn btn-danger">Logout</button>
-        </form>
-      </li>
       <!-- Navbar Search -->
       {{-- <li class="nav-item">
         <a class="nav-link" data-widget="navbar-search" href="#" role="button">
@@ -80,6 +74,13 @@
           </form>
         </div>
       </li> --}}
+      <li class="nav-item">
+        <form action="/logout" method="POST">
+          @csrf
+          <button class="btn btn-danger">Logout</button>
+        </form>
+      </li>
+      
 
       <!-- Messages Dropdown Menu -->
       {{-- <li class="nav-item dropdown">
@@ -91,7 +92,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="/dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Brad Diesel
@@ -107,7 +108,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="/dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   John Pierce
@@ -123,7 +124,7 @@
           <a href="#" class="dropdown-item">
             <!-- Message Start -->
             <div class="media">
-              <img src="/dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
               <div class="media-body">
                 <h3 class="dropdown-item-title">
                   Nora Silvester
@@ -183,8 +184,8 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="/index3.html" class="brand-link">
-      <img src="/template/AdminLTE-3.2.0/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <a href="#" class="brand-link">
+      <img src="template/AdminLTE-3.2.0/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">{{ Auth::user()->level }}</span>
     </a>
 
@@ -193,7 +194,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="/template/AdminLTE-3.2.0/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="template/AdminLTE-3.2.0/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">{{ Auth::user()->name }}</a>
@@ -491,27 +492,30 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="/dash_makanan" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
-              <p>
-                Jobs
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="/dash_testimoni" class="nav-link">
-              <i class="nav-icon far fa-image"></i>
-              <p><b> Testimoni</b>
-               
-              </p>
-            </a>
-          </li>
+          <?php if (Auth::user()->level== 'Super User' or Auth::user()->level== 'Middle User') { ?>
+            <li class="nav-item">
+              <a href="/dash_makanan" class="nav-link">
+                <i class="nav-icon far fa-image"></i>
+                <p>
+                  Jobs
+                </p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/dash_testimoni" class="nav-link">
+                <i class="nav-icon far fa-image"></i>
+                <p>Testimoni
+                  
+                </p>
+              </a>
+            </li>
+
+          <?php } ?>
           <?php if (Auth::user()->level== 'Super User') { ?>
             <li class="nav-item">
               <a href="/dash_user" class="nav-link">
                 <i class="nav-icon far fa-image"></i>
-                <p>User
+                <p><b>User</b>
                 </p>
               </a>
             </li>
@@ -881,51 +885,56 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div style="padding-left: 10px" class="content-wrapper">
-      <center><h1>Edit Testimoni</h1></center>
-      <br><br>
-      <form method="post" action="{{ url('dash_testimoni/'.$model->id) }}">
-        @csrf
-            <input type="hidden" name="_method" value="PATCH">
-          {{-- <div class="form-group">
-            <label for="exampleInputEmail1">Id Jobs</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter iId Bijih Kopi" name="id">
-            {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
-          {{-- </div> --}} 
-          <div class="form-group">
-              <label for="exampleInputEmail1">Nama</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Nama" name="nama" value="{{ $model->nama }}">
-              {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
-          </div>
-          <div class="form-group">
-              <label for="exampleInputEmail1">Email</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Weight" name="email" value="{{ $model->email }}">
-              {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
-          </div>
-          <div class="form-group">
-              <label for="exampleInputEmail1">Pekerjaan</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Harga" name="pekerjaan" value="{{ $model->pekerjaan }}">
-              {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
-          </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Title</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Harga" name="title" value="{{ $model->title }}">
-            {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
-        </div>
-          <div class="form-group">
-              <label for="exampleInputEmail1">Note</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Note" name="note" value="{{ $model->note }}">
-              {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
-          </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Rate</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Note" name="rate" value="{{ $model->rate }}">
-            {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
-        </div>
-        
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-      
+  <div style="padding-left: 10px;" class="content-wrapper">
+    <br>
+    <center><h1>USER</h1></center>
+    <br>
+    
+      <br>
+      <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id User</th>
+                <th>Nama</th>
+                <th>Email</th>
+                {{-- <th>Email_verified_at</th> --}}
+                <th>Password</th>
+                {{-- <th>Remember_token</th> --}}
+                <th>Level</th>
+                <th>Created_at</th>
+                <th>Updated_at</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+          @foreach ($pelamar as $item)
+          <tr>
+            <td>{{ $item->id }}</td>
+            <td>{{ $item->name }}</td>
+            <td>{{ $item->email }}</td>
+            {{-- <td>{{ $item->email_verified_at }}</td> --}}
+            <td>{{ $item->password }}</td>
+            {{-- <td>{{ $item->remember_token }}</td> --}}
+            <td>{{ $item->level }}</td>
+            <td>{{ $item->created_at }}</td>
+            <td>{{ $item->updated_at }}</td>
+            <td>
+              {{-- <a href="" class="btn btn-sm btn-success">Detail</a><br><br> --}}
+              <a href="{{ url('dash_user/'.$item->id.'/edit') }}" class="btn btn-sm btn-warning">Edit</a><br><br>
+              <form action="{{ url('dash_user/'.$item->id) }}" method="POST">
+                @csrf
+                  <input type="hidden" name="_method" value="DELETE">
+                  <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                  {{-- <a href="" class="btn btn-sm btn-danger">Delete</a> --}}
+
+              </form>
+            </td>
+          </tr>
+
+        @endforeach
+            
+        </tbody>
+      </table>
     <!-- Content Header (Page header) -->
     {{-- <div class="content-header">
       <div class="container-fluid">
@@ -1546,38 +1555,38 @@
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="/template/AdminLTE-3.2.0/plugins/jquery/jquery.min.js"></script>
+<script src="template/AdminLTE-3.2.0/plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
-<script src="/template/AdminLTE-3.2.0/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="template/AdminLTE-3.2.0/plugins/jquery-ui/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
   $.widget.bridge('uibutton', $.ui.button)
 </script>
 <!-- Bootstrap 4 -->
-<script src="/template/AdminLTE-3.2.0/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="template/AdminLTE-3.2.0/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- ChartJS -->
-<script src="/template/AdminLTE-3.2.0/plugins/chart.js/Chart.min.js"></script>
+<script src="template/AdminLTE-3.2.0/plugins/chart.js/Chart.min.js"></script>
 <!-- Sparkline -->
-<script src="/template/AdminLTE-3.2.0/plugins/sparklines/sparkline.js"></script>
+<script src="template/AdminLTE-3.2.0/plugins/sparklines/sparkline.js"></script>
 <!-- JQVMap -->
-<script src="/template/AdminLTE-3.2.0/plugins/jqvmap/jquery.vmap.min.js"></script>
-<script src="/template/AdminLTE-3.2.0/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<script src="template/AdminLTE-3.2.0/plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="template/AdminLTE-3.2.0/plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
 <!-- jQuery Knob Chart -->
-<script src="/template/AdminLTE-3.2.0/plugins/jquery-knob/jquery.knob.min.js"></script>
+<script src="template/AdminLTE-3.2.0/plugins/jquery-knob/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
-<script src="/template/AdminLTE-3.2.0/plugins/moment/moment.min.js"></script>
-<script src="/template/AdminLTE-3.2.0/plugins/daterangepicker/daterangepicker.js"></script>
+<script src="template/AdminLTE-3.2.0/plugins/moment/moment.min.js"></script>
+<script src="template/AdminLTE-3.2.0/plugins/daterangepicker/daterangepicker.js"></script>
 <!-- Tempusdominus Bootstrap 4 -->
-<script src="/template/AdminLTE-3.2.0/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="template/AdminLTE-3.2.0/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
 <!-- Summernote -->
-<script src="/template/AdminLTE-3.2.0/plugins/summernote/summernote-bs4.min.js"></script>
+<script src="template/AdminLTE-3.2.0/plugins/summernote/summernote-bs4.min.js"></script>
 <!-- overlayScrollbars -->
-<script src="/template/AdminLTE-3.2.0/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="template/AdminLTE-3.2.0/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
-<script src="/template/AdminLTE-3.2.0/dist/js/adminlte.js"></script>
+<script src="template/AdminLTE-3.2.0/dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
 {{-- <script src="template/AdminLTE-3.2.0/dist/js/demo.js"></script> --}}
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="/template/AdminLTE-3.2.0/dist/js/pages/dashboard.js"></script>
+<script src="template/AdminLTE-3.2.0/dist/js/pages/dashboard.js"></script>
 </body>
 </html>

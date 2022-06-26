@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AdminLTE 3 | Dashboard</title>
+    <title>Admin Selective | Jobs</title>
     <link rel="shortcut icon" href="/template/edulab/images/logodash1.png">
 
   <!-- Google Font: Source Sans Pro -->
@@ -44,11 +44,11 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="template/AdminLTE-3.2.0/index3.html" class="nav-link">Home</a>
+        <a href="/home" target="_blank" class="nav-link">Home</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
+      {{-- <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
-      </li>
+      </li> --}}
     </ul>
 
     <!-- Right navbar links -->
@@ -62,7 +62,7 @@
       </li>
 
       <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
+      {{-- <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-comments"></i>
           <span class="badge badge-danger navbar-badge">3</span>
@@ -118,9 +118,9 @@
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
         </div>
-      </li>
+      </li> --}}
       <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
+      {{-- <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-bell"></i>
           <span class="badge badge-warning navbar-badge">15</span>
@@ -145,17 +145,17 @@
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
-      </li>
+      </li> --}}
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
           <i class="fas fa-expand-arrows-alt"></i>
         </a>
       </li>
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
           <i class="fas fa-th-large"></i>
         </a>
-      </li>
+      </li> --}}
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -476,7 +476,7 @@
               <a href="/dash_makanan" class="nav-link">
                 <i class="nav-icon far fa-image"></i>
                 <p>
-                  Jobs
+                  <b>Jobs</b>
                 </p>
               </a>
             </li>
@@ -489,6 +489,15 @@
               </a>
             </li>
 
+          <?php } ?>
+          <?php if (Auth::user()->level== 'Super User') { ?>
+            <li class="nav-item">
+              <a href="/dash_user" class="nav-link">
+                <i class="nav-icon far fa-image"></i>
+                <p>User
+                </p>
+              </a>
+            </li>
           <?php } ?>
 
           
@@ -858,6 +867,8 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div style="padding-left: 10px;" class="content-wrapper">
+    <br>
+    <center><h1>JOBS</h1></center>
       <br>
       <?php if (Auth::user()->level== 'Super User') { ?>
         <div>
@@ -878,6 +889,7 @@
               <td>created_at</td>
               <td>updated_at</td>
               <td>note</td>
+              <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -891,7 +903,7 @@
               <td>{{ $item->updated_at }}</td>
               <td>{{ $item->note }}</td>
               <td>
-                <a href="" class="btn btn-sm btn-success">Detail</a><br><br>
+                {{-- <a href="" class="btn btn-sm btn-success">Detail</a><br><br> --}}
                 <a href="{{ url('dash_makanan/'.$item->id.'/edit') }}" class="btn btn-sm btn-warning">Edit</a><br><br>
                 <form action="{{ url('dash_makanan/'.$item->id) }}" method="POST">
                   @csrf

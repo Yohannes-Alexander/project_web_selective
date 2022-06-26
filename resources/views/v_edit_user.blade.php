@@ -502,7 +502,7 @@
           <li class="nav-item">
             <a href="/dash_testimoni" class="nav-link">
               <i class="nav-icon far fa-image"></i>
-              <p><b> Testimoni</b>
+              <p>Testimoni
                
               </p>
             </a>
@@ -511,7 +511,7 @@
             <li class="nav-item">
               <a href="/dash_user" class="nav-link">
                 <i class="nav-icon far fa-image"></i>
-                <p>User
+                <p><b>User</b> 
                 </p>
               </a>
             </li>
@@ -884,7 +884,7 @@
   <div style="padding-left: 10px" class="content-wrapper">
       <center><h1>Edit Testimoni</h1></center>
       <br><br>
-      <form method="post" action="{{ url('dash_testimoni/'.$model->id) }}">
+      <form method="post" action="{{ url('dash_user/'.$model->id) }}">
         @csrf
             <input type="hidden" name="_method" value="PATCH">
           {{-- <div class="form-group">
@@ -894,7 +894,7 @@
           {{-- </div> --}} 
           <div class="form-group">
               <label for="exampleInputEmail1">Nama</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Nama" name="nama" value="{{ $model->nama }}">
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Nama" name="name" value="{{ $model->name }}">
               {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
           </div>
           <div class="form-group">
@@ -902,26 +902,48 @@
               <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Weight" name="email" value="{{ $model->email }}">
               {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
           </div>
-          <div class="form-group">
-              <label for="exampleInputEmail1">Pekerjaan</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Harga" name="pekerjaan" value="{{ $model->pekerjaan }}">
-              {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
-          </div>
-          <div class="form-group">
+          {{-- z --}}
+          {{-- <div class="form-group">
             <label for="exampleInputEmail1">Title</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Harga" name="title" value="{{ $model->title }}">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Harga" name="title" value="{{ $model->title }}"> --}}
             {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
-        </div>
+        {{-- </div> --}}
           <div class="form-group">
-              <label for="exampleInputEmail1">Note</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Note" name="note" value="{{ $model->note }}">
+              <label for="exampleInputEmail1">Password </label>
+              <input type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Password" name="password">
               {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
           </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Rate</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Note" name="rate" value="{{ $model->rate }}">
-            {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
-        </div>
+          <label for="exampleInputEmail1">Level</label><br>
+          <div class ="btn-group" data-toggle="buttons">
+            
+            <label class="btn btn-primary active">
+                <?php if ($model->level== 'Super User') { ?>
+                    <input type="radio" name="level"  autocomplete="off" value="Super User" checked>Super User
+                  <?php } ?>
+                @if ($model->level == 'Middle User' or $model->level == 'Low User')
+                    <input type="radio" name="level"  autocomplete="off" value="Super User">Super User
+                @endif
+                
+            </label>
+            <label class="btn btn-primary active">
+                <?php if ($model->level== 'Middle User') { ?>
+                    <input type="radio" name="level"  autocomplete="off" value="Middle User" checked>Middle User
+                  <?php } ?>
+                @if ($model->level == 'Super User' or $model->level == 'Low User')
+                    <input type="radio" name="level"  autocomplete="off" value="Middle User">Middle User
+                @endif
+            </label>
+            <label class="btn btn-primary active">
+                <?php if ($model->level== 'Low User') { ?>
+                    <input type="radio" name="level"  autocomplete="off" value="Low User" checked>Low User
+                  <?php } ?>
+                @if ($model->level == 'Super User' or $model->level == 'Middle User')
+                    <input type="radio" name="level"  autocomplete="off" value="Low User">Low User
+                @endif
+            </label>
+
+          </div>
+          <br><br><br>
         
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>

@@ -88,7 +88,7 @@
 								<li><a href="/career">Career</a></li>
 								<li><a href="/about">About</a></li>
 								<li><a href="/testimoni">Testimoni</a></li>
-								<li><a href="/dash_pelamar">Dashboard</a></li>
+								<li><a href="/dash_pelamar"><b>LOGIN</b></a></li>
 							</ul>
 						</nav>
 						{{-- <div id="bar">

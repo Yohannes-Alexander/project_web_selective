@@ -1,6 +1,6 @@
 
 @extends('layout.v_template')
-@section('title','Bijih Kopi')
+@section('title','About')
 
 
 

@@ -1,5 +1,5 @@
 @extends('layout.v_template')
-@section('title','Testimonn')
+@section('title','Testimoni')
 
 @section('content')
     <div class="banner">
@@ -20,7 +20,7 @@
                 <main class="customer-review">
                     <div class="row">
                         <div class="img">
-                            <img src="template/edulab/images/ilham.png" alt="Customer Picture">
+                            <img src="/template/edulab/images/ilham.png" alt="Customer Picture">
                         </div>
                         <div class="rewiew-content">
                             <header>
@@ -105,19 +105,21 @@
                     <br>
                     <div class="submit-testimonials">
                         <h2>Submit your Testimonials</h2>
-                        <form>
-                            <input type="text" placeholder="Your Name*" required>
-                            <input type="email" name="userEmail" placeholder="Your Email Address..." required>
-                            <input type="text" placeholder="Your Occupation*" required>
-                            <input type="text" placeholder="Your title*" required>
-                            <textarea placeholder="Write your message"></textarea>
-                            <span>
-                                <p>Rate us*</p>
-                            </span>
-                            <input type="number" name="myInput" step="1" value="1" max="5" required>
-                            <input id="file-upload" type="file" value="Upload Image*" accept="image/*" required>
-                            <label for="file-upload" class="custom-file-upload">Upload Image*</label>
-                            <input type="submit" value="Submit">
+                        <form method="POST" action="/testimoni">
+                            @csrf
+                                <input type="text" name="nama" placeholder="Your Name*" required>
+                                <input type="email" name="email" placeholder="Your Email Address..." required>
+                                <input type="text" name="pekerjaan" placeholder="Your Occupation*" required>
+                                <input type="text" name="title" placeholder="Your title*" required>
+                                <textarea name="note" placeholder="Write your message"></textarea>
+                                <span>
+                                    <p>Rate us*</p>
+                                </span>
+                                <input type="number" name="rate" step="1" value="1" max="5" required>
+                                {{-- <input id="file-upload" type="file" value="Upload Image*" accept="image/*" required>
+                                <label for="file-upload" class="custom-file-upload">Upload Image*</label> --}}
+                                <br><br>
+                                <input type="submit" value="Submit">
                         </form>
                     </div>
                 </aside>

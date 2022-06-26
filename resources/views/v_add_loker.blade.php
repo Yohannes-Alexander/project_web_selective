@@ -44,17 +44,24 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="/template/AdminLTE-3.2.0/index3.html" class="nav-link">Home</a>
+        <a href="/home" target="_blank" class="nav-link">Home</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
+      {{-- <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
-      </li>
+      </li> --}}
     </ul>
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-      <!-- Navbar Search -->
+      {{-- Logout --}}
       <li class="nav-item">
+        <form action="/logout" method="POST">
+          @csrf
+          <button class="btn btn-danger">Logout</button>
+        </form>
+      </li>
+      <!-- Navbar Search -->
+      {{-- <li class="nav-item">
         <a class="nav-link" data-widget="navbar-search" href="#" role="button">
           <i class="fas fa-search"></i>
         </a>
@@ -73,10 +80,10 @@
             </div>
           </form>
         </div>
-      </li>
+      </li> --}}
 
       <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
+      {{-- <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-comments"></i>
           <span class="badge badge-danger navbar-badge">3</span>
@@ -132,9 +139,9 @@
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
         </div>
-      </li>
+      </li> --}}
       <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
+      {{-- <li class="nav-item dropdown">
         <a class="nav-link" data-toggle="dropdown" href="#">
           <i class="far fa-bell"></i>
           <span class="badge badge-warning navbar-badge">15</span>
@@ -159,17 +166,17 @@
           <div class="dropdown-divider"></div>
           <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
         </div>
-      </li>
+      </li> --}}
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
           <i class="fas fa-expand-arrows-alt"></i>
         </a>
       </li>
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a class="nav-link" data-widget="control-sidebar" data-controlsidebar-slide="true" href="#" role="button">
           <i class="fas fa-th-large"></i>
         </a>
-      </li>
+      </li> --}}
     </ul>
   </nav>
   <!-- /.navbar -->
@@ -177,9 +184,9 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="/index3.html" class="brand-link">
+    <a href="#" class="brand-link">
       <img src="/template/AdminLTE-3.2.0/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">Admin SCR</span>
+      <span class="brand-text font-weight-light">{{ Auth::user()->level }}</span>
     </a>
 
     <!-- Sidebar -->
@@ -190,7 +197,7 @@
           <img src="/template/AdminLTE-3.2.0/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Yohannes Alexander</a>
+          <a href="#" class="d-block">{{ Auth::user()->name }}</a>
         </div>
       </div>
 
@@ -480,8 +487,8 @@
           <li class="nav-item">
             <a href="/dash_pelamar" class="nav-link">
               <i class="nav-icon far fa-image"></i>
-              <p>
-                Pelamar
+              <p><b>Pelamar</b>
+                
               </p>
             </a>
           </li>
@@ -501,6 +508,15 @@
               </p>
             </a>
           </li>
+          <?php if (Auth::user()->level== 'Super User') { ?>
+            <li class="nav-item">
+              <a href="/dash_user" class="nav-link">
+                <i class="nav-icon far fa-image"></i>
+                <p>User
+                </p>
+              </a>
+            </li>
+          <?php } ?>
           {{-- <li class="nav-item">
             <a href="pages/kanban.html" class="nav-link">
               <i class="nav-icon fas fa-columns"></i>
@@ -867,7 +883,8 @@
 
   <!-- Content Wrapper. Contains page content -->
   <div style="padding-left: 10px" class="content-wrapper">
-      <h1>Add Pelamar</h1><br><br>
+      <center><h1>Add Pelamar</h1></center>
+      <br><br>
       <form method="post" action="{{ url('dash_pelamar') }}">
         @csrf
           {{-- <div class="form-group">
@@ -882,22 +899,22 @@
           </div>
           <div class="form-group">
               <label for="exampleInputEmail1">Email</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Weight" name="email">
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Email" name="email">
               {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Phone</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Weight" name="phone">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Phone" name="phone">
             {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
         </div>
         <div class="form-group">
             <label for="exampleInputEmail1">Note</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Weight" name="note">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Note" name="note">
             {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
         </div>
           <div class="form-group">
               <label for="exampleInputEmail1">Loker</label>
-              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Harga" name="loker">
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Loker" name="loker">
               {{-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
           </div>
         
