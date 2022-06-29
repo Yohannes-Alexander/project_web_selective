@@ -52,7 +52,7 @@
                     <div class="box-body">
                         <h1>Floral, Pomello, Orange</h1>
                         <h1> <br></h1>
-                        <p>Indonesia, West Java, Garut</p>
+                        <p>Indonesia, West Java, Bandung</p>
                         <section>
                             <p><strong><span>FILTER</span></strong></p>
                             <p><span>Weight:</span> 200 gr</p>
