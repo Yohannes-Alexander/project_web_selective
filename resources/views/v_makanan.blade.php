@@ -33,7 +33,7 @@
                     </div>
                     <p  class="learn-desining-banner-course">Coffee Bun </p>
                     <div class="box-body">
-                        <p>Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum</p>
+                        <p>Roti yang dibalur dengan bubuk kopi gayo dengan taburan coffee sprinkle</p>
                         <section>
                             {{-- <p><strong><span>COFFEE</span></strong></p> --}}
                             <p></p>
