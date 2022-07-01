@@ -180,18 +180,18 @@
 				<div class="container">
 					<hr class="footer-line">
 					<ul class="social-list">
-						<li><a href=""><i class="fab fa-facebook-square"></i></a></li>
-						<li><a href=""><i class="fab fa-twitter"></i></a></li>
-						<li><a href=""><i class="fab fa-skype"></i></a></li>
-						<li><a href=""><i class="fab fa-youtube"></i></a></li>
-						<li><a href=""><i class="fab fa-instagram"></i></a></li>
+						<div class="footer-last-section">
+							<div class="container">
+								<p>Selective Coffee Roaster <span> </p>
+							</div>
+						</div>
+						{{-- <li><a href=""><i class="fab fa-facebook-square"></i></a></li> --}}
+						{{-- <li><a href=""><i class="fab fa-twitter"></i></a></li> --}}
+						{{-- <li><a href=""><i class="fab fa-skype"></i></a></li> --}}
+						{{-- <li><a href=""><i class="fab fa-youtube"></i></a></li> --}}
+						{{-- <li><a href=""><i class="fab fa-instagram"></i></a></li> --}}
 					</ul>
 					<hr class="footer-line">
-				</div>
-			</div>
-			<div class="footer-last-section">
-				<div class="container">
-					<p>Selective Coffee Roaster <span> </p>
 				</div>
 			</div>
 		</footer>

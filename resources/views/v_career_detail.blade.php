@@ -74,7 +74,7 @@
                 </form>
             </div>
             <!-- New Letter Ends -->
-            <div class="recent-post">
+            {{-- <div class="recent-post">
                 <h2>Other Careers</h2>
                 <div class="post">
                     
@@ -130,7 +130,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- Recent Post Close -->
         </aside>
     </div>
