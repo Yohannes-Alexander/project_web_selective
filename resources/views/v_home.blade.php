@@ -82,11 +82,11 @@
 
                     <div class="box-wrap" itemprop="event" itemscope itemtype=" http://schema.org/Course">
                         <div class="img-wrap"  itemprop="image"><img src="https://source.unsplash.com/380x253/?cake" alt="courses picture"></div>
-                            <a href="#" class="learn-desining-banner" itemprop="name">Kue </a>
+                            <a href="#" class="learn-desining-banner" itemprop="name">Cake </a>
                         <div class="box-body" itemprop="description">
-                            <p>Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum Lorem Ipsum lorem ipsum</p>
+                            <p>Selective Coffee Roaster menyajikan berbagai macam kue yang terinspirasi dari chef signature sehingga menghasilkan cake yang authentic</p>
                             <section itemprop="time">
-                                <p><span>Harga:</span> Rp. 10.000</p>
+                                <p><span>Harga:</span> start from Rp. 90.000/slice</p>
                                 <p><br></p>
                                 <p><br></p>
                             </section>
