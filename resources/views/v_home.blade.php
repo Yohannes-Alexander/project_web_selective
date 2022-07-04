@@ -395,11 +395,9 @@
                         </div>
                         <div class="customer-review">
                             <p itemprop="description">
-                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non"
+                                "Selective coffee roaster ini memiliki suasana coffee shop yang cozy
+                                 dan bener bener cocok banget buat semua kalangan yang mau nyari tempat
+                                 yang instagrammable ataupun hanya sekedar nongkrong doang "
                             </p>
                         </div>
                     </div>
@@ -417,11 +415,9 @@
                         </div>
                         <div class="customer-review">
                             <p itemprop="description">
-                                "22222Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non"
+                                "Selective coffee roaster cocok banget buat semua kalangan. 
+                                 menunya pun juga sangat beragam yang terinspirasi dari nusantara
+                                 next time bakal kesini terus kalau pulang dari kerja "
                             </p>
                         </div>
                     </div>
